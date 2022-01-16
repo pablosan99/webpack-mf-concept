@@ -1,0 +1,44 @@
+{
+  "name": "@mf-app",
+  "private": true,
+  "scripts": {
+    "host:build": "yarn workspace @mf-app/host build",
+    "host:run": "yarn workspace @mf-app/host run",
+    "header:build": "yarn workspace @mf-app/header build",
+    "header:run": "yarn workspace @mf-app/header run",
+    "dashboard:build": "yarn workspace @mf-app/dashboard build",
+    "dashboard:run": "yarn workspace @mf-app/dashboard run",
+    "all:build": "yarn run host:build && yarn run header:build && yarn run dashboard:build",
+    "all:run":  "yarn run host:run && yarn run header:run && yarn run dashboard:run"
+  },
+  "workspaces": [
+    "host",
+    "dashboard",
+    "header"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "autoprefixer": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.3.0",
+    "html-webpack-plugin": "^5.3.2",
+    "postcss": "^8.2.1",
+    "postcss-loader": "^4.1.0",
+    "style-loader": "^3.3.0",
+    "typescript": "^4.5.2",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "packageManager": "yarn@3.1.1"
+}
