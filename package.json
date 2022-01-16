@@ -3,12 +3,12 @@
   "private": true,
   "scripts": {
     "host:build": "yarn workspace @mf-app/host build",
-    "host:run": "yarn workspace @mf-app/host run",
+    "host:run": "yarn workspace @mf-app/host start",
     "header:build": "yarn workspace @mf-app/header build",
-    "header:run": "yarn workspace @mf-app/header run",
+    "header:run": "yarn workspace @mf-app/header start",
     "dashboard:build": "yarn workspace @mf-app/dashboard build",
-    "dashboard:run": "yarn workspace @mf-app/dashboard run",
-    "all:build": "yarn run host:build && yarn run header:build && yarn run dashboard:build",
+    "dashboard:run": "yarn workspace @mf-app/dashboard start",
+    "all:build": "yarn run host:build & yarn run header:build & yarn run dashboard:build",
     "all:run":  "yarn run host:run && yarn run header:run && yarn run dashboard:run"
   },
   "workspaces": [
